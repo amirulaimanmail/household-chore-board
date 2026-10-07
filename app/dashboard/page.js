@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Check, CirclePlus, LogOut, Trash2, Users, X } from "lucide-react";
 import { getSession, signOut } from "next-auth/react";
 import { ChoresProvider, useChores } from "./ChoresContext";
+import WeatherCard from "./WeatherCard";
 
 function getLocalDate() {
   const now = new Date();
@@ -148,6 +149,7 @@ function DashboardBoard({ sessionName }) {
             <CirclePlus /> Add chore
           </button>
         </div>
+        <WeatherCard />
         <section className="simple-summary">
           <strong>{remaining}</strong>
           <span>chores left this week</span>
